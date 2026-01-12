@@ -50,7 +50,7 @@ struct Index {
       colors: [
         [0x0d1b2a, 0.0],
         [0x1b263b, 0.25],
-        [0x415a77, 0.5],
+        [0x415a77, 0.5]
       ]
     })
     .expandSafeArea()

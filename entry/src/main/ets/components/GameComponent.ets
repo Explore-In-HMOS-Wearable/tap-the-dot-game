@@ -5,7 +5,12 @@ interface GeneratedTypeLiteralInterface_1 {
   x: number;
   y: number;
 }
+let randSeed: number = Date.now() & 0xffffffff;
 
+function rand(): number {
+  randSeed = (1664525 * randSeed + 1013904223) >>> 0;
+  return randSeed / 0xffffffff;
+}
 @Component
 export struct GameComponent {
   @ObjectLink timer: Timer;
@@ -52,8 +57,8 @@ export struct GameComponent {
     const dotSize = 32;
     const maxRadius = (screenSize - dotSize) / 2;
 
-    const angle = Math.random() * 2 * Math.PI;
-    const radius = Math.sqrt(Math.random()) * maxRadius;
+    const angle = rand() * 2 * Math.PI;
+    const radius = Math.sqrt(rand()) * maxRadius;
 
     const x = center + radius * Math.cos(angle) - dotSize / 2;
     const y = center + radius * Math.sin(angle) - dotSize / 2;

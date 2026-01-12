@@ -31,11 +31,11 @@ Tap The Dot is a reflex-based game built for HarmonyOS devices. The goal is simp
 # Directory Structure
 ```
 entry/src/main/ets/
-|---compenents                    
+|---compenents
 |   |---GameComponent.ets         // Main gameplay component
-|---services                     
+|---services
 |   |---TimerService.ets          // Timer implementation
-|---states                        
+|---states
 |   |---GameState.ets             // Game state management
 |---pages
 |   |---Index.ets                 // Entry page with game controls
